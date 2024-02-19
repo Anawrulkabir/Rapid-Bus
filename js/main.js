@@ -7,11 +7,16 @@ const totalPriceLabel = document.getElementById('total-price');
 const grandPriceLabel = document.getElementById('grand-price');
 const applyCuponText = document.getElementById('add-cuppon-here');
 const applyCupponBtn = document.getElementById('apply-cuppon-btn');
-const applyCupponArea = document.getElementById('apply-cuppon-area')
-const cupponTextPlaceHolder = document.getElementById('add-cuppon-here')
+const applyCupponArea = document.getElementById('apply-cuppon-area');
+const cupponTextPlaceHolder = document.getElementById('add-cuppon-here');
+//const passengerNameTextArea = document.getElementById('passenger-name-textarea').target.value.length;
+// const passengerNameTextArea = document.getElementById('passenger-name-textarea').addEventListener('keyup', function(){
+   
+// });
+// const phoneNumberTextArea = document.getElementById('phone-number-textarea').target.value.length;
 
 
-console.log(cupponTextPlaceHolder);
+console.log(passengerNameTextAre);
 
 
 const buttons = document.getElementsByClassName('kbd')
