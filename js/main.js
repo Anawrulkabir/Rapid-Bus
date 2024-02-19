@@ -9,14 +9,29 @@ const applyCuponText = document.getElementById('add-cuppon-here');
 const applyCupponBtn = document.getElementById('apply-cuppon-btn');
 const applyCupponArea = document.getElementById('apply-cuppon-area');
 const cupponTextPlaceHolder = document.getElementById('add-cuppon-here');
-//const passengerNameTextArea = document.getElementById('passenger-name-textarea').target.value.length;
-// const passengerNameTextArea = document.getElementById('passenger-name-textarea').addEventListener('keyup', function(){
+const passengerNameTextArea = document.getElementById('passenger-name-textarea');
+
+const nameLength = 0;
+passengerNameTextArea.addEventListener('keyup', function(event){
+   const nameText = event.target.value;
+   const len = nameText.length;
+
+   nameLength = len;
    
-// });
-// const phoneNumberTextArea = document.getElementById('phone-number-textarea').target.value.length;
+});
+const phoneNumberTextArea = document.getElementById('phone-number-textarea');
+
+const numberLength = 0;
+phoneNumberTextArea.addEventListener('keyup', function(event){
+   const nameText = event.target.value;
+   const len = nameText.length;
+
+   numberLength = len;
+   
+});
 
 
-console.log(passengerNameTextAre);
+
 
 
 const buttons = document.getElementsByClassName('kbd')
@@ -59,7 +74,7 @@ function getButtonById( buttonId ){
 
 buttonA1.addEventListener('click', function (){
 
-    if(count < 5 && A1 == false){
+    if(count < 5 && A1 == false && nameLength !== 0 && numberLength !== 0){
 
         A1 = true;
         const idName = getButtonById('A1');
@@ -152,7 +167,7 @@ buttonA1.addEventListener('click', function (){
 buttonA2.addEventListener('click', function (){
 
 
-    if(count < 5 && A2 == false){
+    if(count < 5 && A2 == false && nameLength !== 0 && numberLength !== 0){
 
         A2 = true;
         const idName = getButtonById('A2');
@@ -208,7 +223,7 @@ buttonA2.addEventListener('click', function (){
 buttonA3.addEventListener('click', function (){
 
 
-    if(count < 5 && A3 == false ){
+    if(count < 5 && A3 == false  && nameLength !== 0 && numberLength !== 0){
 
         A3 = true;
         const idName = getButtonById('A3');
@@ -267,7 +282,7 @@ buttonA3.addEventListener('click', function (){
 })
 buttonA4.addEventListener('click', function (){
 
-    if(count < 5 && A4 == false){
+    if(count < 5 && A4 == false && nameLength !== 0 && numberLength !== 0){
         A4 = true;
         const idName = getButtonById('A4');
 
@@ -324,7 +339,7 @@ buttonA4.addEventListener('click', function (){
 buttonB1.addEventListener('click', function (){
 
 
-    if(count < 5 && B1 == false){
+    if(count < 5 && B1 == false && nameLength !== 0 && numberLength !== 0){
 
         B1 = true;
 
@@ -379,7 +394,7 @@ buttonB1.addEventListener('click', function (){
 })
 buttonB2.addEventListener('click', function (){
 
-    if(count < 5 && B2 == false){
+    if(count < 5 && B2 == false && nameLength !== 0 && numberLength !== 0){
         B2 = true;
         const idName = getButtonById('B2');
 
@@ -432,7 +447,7 @@ buttonB2.addEventListener('click', function (){
 })
 buttonB3.addEventListener('click', function (){
 
-    if(count < 5 && B3 == false){
+    if(count < 5 && B3 == false && nameLength !== 0 && numberLength !== 0){
         B3 = true;
         const idName = getButtonById('B3');
 
@@ -488,7 +503,7 @@ buttonB3.addEventListener('click', function (){
 buttonB4.addEventListener('click', function (){
 
 
-    if(count < 5 && B4 == false){
+    if(count < 5 && B4 == false && nameLength !== 0 && numberLength !== 0){
         B4 = true;
 
         const idName = getButtonById('B4');
@@ -553,7 +568,7 @@ applyCuponText.addEventListener('keyup', function(event){
 
     applyCupponBtn.addEventListener('click', function(){
         if(new15Cuppon == true){
-            console.log("yeyyy");
+            // console.log("yeyyy");
             grand = grand - (grand * 15)/100;
             grandPriceLabel.innerText = grand;
 
@@ -561,7 +576,7 @@ applyCuponText.addEventListener('keyup', function(event){
 
 
         }else if(couple20Cuppon == true){
-            console.log("ahahahha");
+            // console.log("ahahahha");
             grand = grand - (grand * 20)/100;
             grandPriceLabel.innerText = grand;
             applyCupponArea.classList.add('hidden');
